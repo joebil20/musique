@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musique - Ma Playlist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Variables de couleurs */
+        :root {
+            --primary-color: #FFD700; /* Jaune doré pour pop */
+            --secondary-color: #FF6347; /* Tomate pour rock */
+            --tertiary-color: #32CD32; /* Vert Lime pour rap */
+            --background-color: #2F4F4F; /* Gris foncé pour l'arrière-plan */
+            --text-color-light: #FAFAFA; /* Blanc cassé */
+            --text-color-dark: #333; /* Gris foncé pour le texte */
+            --button-hover-color: #FF4500; /* Orange vif */
+            --footer-background: #1C1C1C; /* Fond sombre pour le footer */
+        }
+
+        /* Styles globaux */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFAF0; /* Beige clair */
+            color: var(--text-color-dark);
+            background-image: linear-gradient(45deg, #1e1e1e, #ffd700); /* Mélange de couleurs */
+            background-size: cover;
+        }
+
+        header {
+            background-color: var(--secondary-color); /* Tomate */
+            color: var(--text-color-light);
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+        }
+
+        header p {
+            font-size: 1.4rem;
+        }
+
+        .content {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .audio-player {
+            background-color: #FFF;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto;
+            transition: transform 0.3s ease;
+        }
+
+        .audio-player:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Effet de survol */
+        }
+
+        .audio-player h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombre pour un effet rock */
+        }
+
+        audio {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 2px solid var(--tertiary-color); /* Bordure verte pour rap */
+            background-color: #F2F2F2;
+        }
+
+        .song-info {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: var(--text-color-dark);
+        }
+
+        .song-info span {
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        .back-button {
+            margin-top: 30px;
+            background-color: var(--primary-color); /* Jaune pour pop */
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.3rem;
+            text-decoration: none;
+            border-radius: 10px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: var(--button-hover-color); /* Effet sur hover */
+        }
+
+        /* Mise en page responsive */
+        @media (max-width: 768px) {
+            .audio-player {
+                width: 95%;
+                padding: 20px;
+            }
+
+            .back-button {
+                font-size: 1.1rem;
+                padding: 12px 25px;
+            }
+        }
+
+        footer {
+            background-color: var(--footer-background);
+            color: var(--text-color-light);
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Ma Playlist</h1>
+        <p>Écoutez vos morceaux préférés avec style !</p>
+    </header>
+
+    <div class="content">
+        <div class="audio-player">
+            <h2>Vibes Tropicales</h2>
+            <audio controls>
+                <source src="Vibes Tropicales.mp4" type="audio/mpeg">
+                Votre navigateur ne supporte pas l'élément audio.
+            </audio>
+            <div class="song-info">
+                <p><span>Artiste :</span> Joebil</p>
+                <p><span>Album :</span> Joebil Album</p>
+            </div>
+            <a href="musique.html" class="back-button">Retour vers Musique</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 JoebilWorld - <a href="contact.html">Contactez-nous</a></p>
+    </footer>
+
+</body>
+
+</html>
