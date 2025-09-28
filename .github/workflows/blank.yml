@@ -1,0 +1,26 @@
+name: Déploiement GitHub Pages (gh-pages)
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node (optionnel si pas de build)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18' # optionnel
+
+      # Si tu n'as PAS de build, saute l'étape build.
+      # Si tu as un build (npm run build), lance-le ici et cible ./dist ou ./build
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./        # dossier à publier (./ si index.html à la racine)
